@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Laboratory Design System - Professional Healthcare Theme */
+
+@layer base {
+  :root {
+    /* Primary - C.A.C.A Laboratory Green */
+    --primary: 130 60% 25%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Light sage green */
+    --secondary: 130 30% 94%;
+    --secondary-foreground: 130 60% 20%;
+    
+    /* Background - Clean white */
+    --background: 0 0% 100%;
+    --foreground: 130 20% 15%;
+    
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 130 20% 15%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 130 20% 15%;
+    
+    /* Muted - Light gray green */
+    --muted: 130 15% 96%;
+    --muted-foreground: 130 10% 45%;
+    
+    /* Accent - Darker green */
+    --accent: 130 50% 30%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 130 15% 90%;
+    --input: 130 15% 90%;
+    --ring: 130 60% 25%;
+    
+    --radius: 0.5rem;
+    
+    /* Custom laboratory tokens */
+    --lab-gradient-start: 130 60% 25%;
+    --lab-gradient-end: 130 45% 35%;
+    --lab-hero-overlay: 130 60% 15%;
+    --lab-section-alt: 130 20% 97%;
+    
+    /* WhatsApp green */
+    --whatsapp: 142 70% 45%;
+    --whatsapp-hover: 142 70% 38%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --primary: 130 50% 45%;
+    --primary-foreground: 130 20% 10%;
+    
+    --secondary: 130 25% 15%;
+    --secondary-foreground: 130 15% 90%;
+    
+    --background: 130 20% 8%;
+    --foreground: 130 15% 95%;
+    
+    --card: 130 20% 12%;
+    --card-foreground: 130 15% 95%;
+    
+    --popover: 130 20% 12%;
+    --popover-foreground: 130 15% 95%;
+    
+    --muted: 130 20% 18%;
+    --muted-foreground: 130 10% 60%;
+    
+    --accent: 130 40% 40%;
+    --accent-foreground: 0 0% 100%;
+    
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 130 20% 20%;
+    --input: 130 20% 20%;
+    --ring: 130 50% 45%;
+    
+    --lab-gradient-start: 130 50% 40%;
+    --lab-gradient-end: 130 40% 50%;
+    --lab-hero-overlay: 130 60% 8%;
+    --lab-section-alt: 130 20% 10%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .lab-gradient {
+    background: linear-gradient(135deg, hsl(var(--lab-gradient-start)), hsl(var(--lab-gradient-end)));
+  }
+  
+  .lab-gradient-text {
+    background: linear-gradient(135deg, hsl(var(--lab-gradient-start)), hsl(var(--lab-gradient-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .lab-section-alt {
+    background-color: hsl(var(--lab-section-alt));
+  }
+  
+  .lab-hero-overlay {
+    background: linear-gradient(to right, hsl(var(--lab-hero-overlay) / 0.9), hsl(var(--lab-hero-overlay) / 0.6));
+  }
+}
+
+@layer components {
+  .container-lab {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
